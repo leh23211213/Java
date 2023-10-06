@@ -7,7 +7,7 @@ public class Program {
         Node current = null;
         char ch = 'A';
         while (true) {
-            System.out.println(" input value of " + ch + " (or -1 to stop input): ");
+            System.out.println(" input value of " + ch + " (or 99 to stop input): ");
             double value;
             try {
                 value = Integer.parseInt(sc.nextLine());
@@ -15,7 +15,7 @@ public class Program {
                 System.out.println("Erros! " + e + " ReInput a number " + ch);
                 continue;
             }
-            if (value == -1)
+            if (value == 99)
                 break;
             Node newNode = new Node(value, ch);
             ch++;
