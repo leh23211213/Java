@@ -1,4 +1,3 @@
-package Github.OOP.hoctap.src.Class;
 
 public class Circle {
     private double radius;

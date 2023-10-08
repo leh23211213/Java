@@ -1,4 +1,3 @@
-package Github.OOP.hoctap.src.Class;
 
 import java.util.Scanner;
 
