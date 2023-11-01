@@ -6,8 +6,6 @@
 package sv_btvn;
 
 import java.util.Scanner;
-import java.util.StringTokenizer;
-import jdk.internal.util.xml.impl.Input;
 
 /**
  *
@@ -15,16 +13,17 @@ import jdk.internal.util.xml.impl.Input;
  */
 public class Chuoi_Bai6 {
 
-    static String st;
+    public static String st;
 
-    static String nhapChuoi() {
+    public static String nhapChuoi() {
         Scanner kb = new Scanner(System.in);
-        System.out.println("Nhập chuỗi văn bản: ");;
+        System.out.println("Nhập chuỗi văn bản: ");
+        ;
         st = kb.nextLine();
         return st;
     }
 
-    static int demKyTu() {
+    public static int demKyTu() {
         int dem = 0;
         for (int i = 0; i < st.length(); i++) {
             if (st.charAt(i) != ' ') {
@@ -35,7 +34,7 @@ public class Chuoi_Bai6 {
 
     }
 
-    static int demTu() {
+    public static int demTu() {
         int word = 0;
         if (st.charAt(0) != ' ') {
             word = 1;
@@ -46,13 +45,13 @@ public class Chuoi_Bai6 {
             }
         }
         return word;
-              //Cách 2
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println(" mời nhập vào chuỗi");
-//        String chuoi = sc.nextLine();
-//        StringTokenizer chuoi1 = new StringTokenizer(chuoi);
-//        int sotutrongchuoi = chuoi1.countTokens();
-//        System.out.println(" số từ trong chuỗi là: " + sotutrongchuoi);
+        // Cách 2
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println(" mời nhập vào chuỗi");
+        // String chuoi = sc.nextLine();
+        // StringTokenizer chuoi1 = new StringTokenizer(chuoi);
+        // int sotutrongchuoi = chuoi1.countTokens();
+        // System.out.println(" số từ trong chuỗi là: " + sotutrongchuoi);
     }
 
     public static void demKyTuDacBiet() {
@@ -73,10 +72,10 @@ public class Chuoi_Bai6 {
         System.out.println("\n *** CHUONG TRINH IN CHUOI NGUOC *** ");
         try {
             System.out.println("\n *** Nhap chuoi:");
-            //  BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            // Class BufferedReader cho phép đọc text từ luồng nhập ký 	
-            //tự, tạo bộ đệm cho những ký tự để hỗ trợ cho việc đọc 	
-            //những ký tự, những mảng hay những dòng.
+            // BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            // Class BufferedReader cho phép đọc text từ luồng nhập ký
+            // tự, tạo bộ đệm cho những ký tự để hỗ trợ cho việc đọc
+            // những ký tự, những mảng hay những dòng.
             // Doc 1 dong tu BufferReadered ket thuc bang dau ket thuc dong.
             Scanner sc = new Scanner(System.in);
             String S = sc.nextLine();
@@ -85,18 +84,18 @@ public class Chuoi_Bai6 {
             System.out.println("\n Chuoi vua nhap là: " + S);
             // Xuat chuoi nghich dao
             System.out.println("\n Chuoi nghich dao la:");
-            //  for (int i=str.length()-1; i>=0; i--)
+            // for (int i=str.length()-1; i>=0; i--)
             for (int i = S.length() - 1; i >= 0; i--) {
-                //System.out.print(str.charAt(i));
+                // System.out.print(str.charAt(i));
                 System.out.print(S.charAt(i));
             }
-        } //catch (IOException e)
+        } // catch (IOException e)
         catch (Exception e) {
             System.out.println(e.toString());
         }
     }
-        public static void daoNguocCacTuTrongChuoi()
-    {
+
+    public static void daoNguocCacTuTrongChuoi() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\n Mời nhập vào các từ : ");
 
@@ -110,7 +109,7 @@ public class Chuoi_Bai6 {
 
         System.out.print(" Các từ sau khi đảo ngược là:\n " + chuoiDaoNguoc);
     }
-    
+
     public static void main(String[] args) {
         nhapChuoi();
         System.out.println("Chuỗi " + st + " có " + demKyTu() + " ký tự");
